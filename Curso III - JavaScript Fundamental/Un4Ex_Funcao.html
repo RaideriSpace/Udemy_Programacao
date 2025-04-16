@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            /* Função simples */
+            function escreverNome(){
+                console.log("Lucas Alves Pinheiro");
+            }
+
+            escreverNome();
+
+
+            /* Função com retorno */
+            function converterTemperatura(celsius){
+                let fah = (celsius * 1.8) + 32;
+                return fah;
+            }
+
+            let fahreinheint = converterTemperatura(30);
+            console.log(fahreinheint);
+
+            /* Função com casas decimais 
+            Math.round - Arredonda pra média (a cima para + 0.5 e a baixo para menor q 0.5)
+            Math.ceil - Arredonda pra cima
+            Math.floor - Arredonda pra baixo
+            toFixed(n) - Define o número de casas decimais (n);
+
+            Variáveis criadas dentro da função, só existem na função, não existem fora dela.
+            */
+            let bonus;
+            function calcularDiaria(salario,dias){
+                bonus = 300;
+                return (salario/dias).toFixed(2);
+            }
+
+            let diaria = calcularDiaria(5500,22);
+            alert(diaria);
+            alert(bonus);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

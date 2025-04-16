@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            /* Forma 1 de criar Array */
+            let salada1 = new Array();
+                salada1 [0] = "Uva";
+                salada1 [1] = "Laranja";
+                salada1 [2] = "Banana";
+                salada1 [3] = "Maça";
+
+            console.log("Salada 1 = " + salada1);    
+
+            /* Forma 2 de criar Array */
+            let salada2 = ["Uva", "Laranja", "Banana", "Maça"];
+
+            console.log("Salada 2 = " + salada2)
+            
+            /* Adicionar ao final da Array */
+            salada1.push("Mamão");
+
+            /* Adicionar no início da Array */
+            salada1.unshift("Pêssego");
+
+            /* Excluir o primeiro elemento da Array */
+            salada2.shift();
+
+            console.log(salada1);
+            console.log("Número de frutas na salada 1 = " + salada1.length);
+
+            console.log(salada2);
+            console.log("Número de frutas na salada 2 = " + salada2.length);
+
+            /* Pesquisa um item na Array e retorna:
+                    A posição do item ou -1, caso não exista */
+
+             let pesquisa  = salada1.indexOf("Mamão");
+             console.log(pesquisa);
+
+            /* Ordenar os elementos na Array em ordem alfabética para Strings*/
+            salada1.sort();
+            console.log(salada1);
+
+
+             /* Ordenar os elementos na Array em ordem numérica para números*/
+            function ordenarNumeros (a,b) {
+                return a-b;
+            }
+
+            let megasena = [10, 20, 5, 23, 12, 7, 65];
+
+            megasena.sort(ordenarNumeros);
+            console.log(megasena);
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

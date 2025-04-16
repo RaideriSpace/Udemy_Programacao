@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+
+        <script>
+            function mostrarResultado(){
+                document.getElementById("resultado").innerHTML = document.getElementById("humor").value;
+            }
+        </script>
+
+    </head>
+
+    <body>
+        
+        <h2>Formulário</h2>
+        <form action="destino.html" method="post">
+            
+            <label for="nome">Nome Completo</label>
+            <input 
+                type="text" 
+                name="nome" 
+                id="nome" 
+                size="30" 
+                maxlength="100" 
+                required placeholder="Insira seu nome"
+                autofocus
+            >
+
+            <label for="telefone">Telefone</label>
+            <input 
+                type="tel" 
+                name="telefone" 
+                id="telefone" 
+                size="30" 
+                maxlength="30"
+            >
+
+            <label for="email">E-mail</label>
+            <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                size="30" 
+                maxlength="60" 
+                required
+            >
+
+            <label for="website">Web Site</label>
+            <input type="url" name="website" id="website" size="30" maxlength="100">
+
+            <label for="aniversario"> Aniversário </label>
+            <input type="date" name="aniversario" id="aniversario" placeholder="dd/mm/aaaa">
+
+            <input type="text" list="lojas" name="nome_loja" id="nome_loja" placeholder="Digite o nome da loja">
+            <datalist id="lojas">
+                <option value="Centauro"> Centauro </option>
+                <option value="Centro Automotivo"> Centro Automotivo </option>
+                <option value="Renner"> Renner </option>
+                <option value="Vans"> Vans </option>
+                <option value="Mc Donalds"> Mc Donalds </option>
+            </datalist>
+
+           
+            <p><input type="range" id="humor" min="1" max="20" value="1" onchange="mostrarResultado()">
+            <span id="resultado"></span></p>
+
+            <label for="color">Escolha uma cor</label>
+            <input type="color" name="color" id="color">
+
+            <label for="search">Faça uma pesquisa</label>
+            <input type="search" name="search" id="search">
+            
+
+            <label for="filhos"> Quantos filhos tem? </label>
+            <input type="number" name="filhos" id="filhos" max="10" min="0">
+
+            <input type="submit" value="Enviar" id="enviar" name="enviar">
+
+        </form>
+        
+    
+    </body>
+</html>

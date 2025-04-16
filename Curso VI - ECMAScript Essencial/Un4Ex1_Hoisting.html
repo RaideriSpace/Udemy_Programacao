@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Curso de EcmaScript 6.0</title>
+
+        <style>
+            section div {
+                height: 100px;
+                width: 100px;
+                background-color: blue;
+                border-radius: 50%;
+                float: left;
+                margin: 5px;
+                cursor: pointer;
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script type="text/babel">
+
+            //declaração
+            let nome;
+
+            //inicialização
+            nome = "Maria";
+
+            //chamada
+            console.log(nome);
+
+            console.log(somar(2, 3));
+
+            function somar (a,b) {
+                return a + b;
+            }
+
+            //O Hoisting faz com que a função seja automaticamente lida sempre primeiro, 
+            // como se ficasse no topo do código.
+
+            var loto = 40;
+
+            if(loto) {
+                //O let não é lido fora do if 
+                let loto = 10;
+                console.log("escopo local " + loto);
+            }
+
+            console.log("escopo global " + loto);
+
+            // Graças ao 'let', a número de cada item é respeitado, ao invés de ficar 45 para todos.
+            for( let i = 0; i < 45; i++ ) {
+                var div = document.createElement('div');
+                div.onclick = function() {
+                    alert("Você clicou no número " + i);
+                }
+                document.getElementsByTagName('section')[0].appendChild(div);
+            }
+
+            //Constante é imutável e deve ser sempre nomeada com letras maiúsculas
+            // Constante deve sempre ser criada antes de ser chamada.
+            const NASCIMENTO = 1980;
+            console.log(NASCIMENTO);
+
+            function calcularIdade(anoAtual) {
+                // Se criado uma variável com mesmo nome em uma função com var ou let, 
+                // a de fora não é considerada. 
+                let NASCIMENTO = 2000
+                return anoAtual - NASCIMENTO
+            }
+
+            console.log(calcularIdade(2025));
+            //Mas ao retornar da função, o valor continua sendo o da constante.
+            console.log(NASCIMENTO);
+
+
+            let nome2 = "Lucas";
+            console.log("Bom dia, " + nome2);
+            console.log(`Bom dia, ${nome2}!`);
+            // Para se concatenar com template litels, utiliza-se a crase (``)
+            // É a forma mais recomendada de se concatenar.
+            console.log(`Olá, ${nome2}`);
+
+            var citricas = ["laranja", "tangerina", "limão"];
+            var rosaceae = ["Maça", "Pera"];
+
+            //Colocar ... antes da array, a array é aberta e incorporada na variavel.
+            var salada = ["Banana", ...citricas, "Uva", rosaceae, "Mamão", "Abacate"];
+
+            console.log(salada);
+
+            //Os valores passados dentro da função são considerados como padrão, 
+            // se não foram definidos nenhum na chamada, será adotado os valores padrão. 
+
+            function jogoEliminatorias(time1="Brasil", time2="Argentina"){
+                console.log(`Hoje tem ${time1} x ${time2}`);
+            }
+
+            jogoEliminatorias("Chile", "Colombia");
+            jogoEliminatorias();
+
+            //Repeat define quantas vezes será repetido a string.
+            console.log("gol ".repeat(3));
+
+            var estatisticas = {
+                gols (qtd) {
+                    console.log("gol ".repeat(qtd));
+                }, desarmes(qtd){
+                    console.log("desarme ".repeat(qtd));
+                }
+            }
+
+            estatisticas.gols(3);
+            estatisticas.desarmes(4);
+
+            //Arrow "=>" substitui a declaração de função.
+            // Onde seria: function(frutas) { console.log(frutas)} 
+            // se resume a frutas => console.log(frutas);
+            // Se tiver 2 parâmmetros, colocar em ( );
+
+            let minhaSalada = frutas => console.log(frutas);
+
+            minhaSalada(["Uva", "Laranja", "Mamão"])
+
+            
+
+        </script>
+
+    </head>
+    <body>
+        <section></section>
+    </body>
+</html>

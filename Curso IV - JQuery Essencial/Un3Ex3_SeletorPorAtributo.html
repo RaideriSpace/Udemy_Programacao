@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        
+        <style>
+			body { font-family:Arial, Helvetica, sans-serif; font-size:0.9em; }
+			li { padding:5px;margin-bottom:1px }
+			.vermelho { color:#F00 }
+			.verde { color:#096 }
+		</style>
+
+		<script src="jquery-3.7.1.js"></script>
+        <script>
+            // Colocando entre [] é possível selecionar só o ID, classe, ou atributo que quiser. 
+            // Para mais de um atributo, colosse [] []. Ex: [id] [title]
+            // Pode se definir o id especifico [id='texto1']
+
+			$( function(e) {
+				$("li[class]").css("background-color", "#FF9");
+            });
+		</script>
+    </head>
+
+    <body>
+    	<ul>
+            <li class="vermelho">Curso HTML5 Essencial</li>
+            <li class="verde">Curso CSS3 Essencial</li>
+            <li id="texto1">Curso Javascript Essencial</li>
+            <li id="texto2">Curso jQuery Fundamental</li>             
+    	</ul>
+    </body>
+</html>

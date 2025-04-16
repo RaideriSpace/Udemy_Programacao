@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+
+            /* Retorna a letra de posição (n) */
+            
+            let frase = "Paralelepípedo ganhou o maior prêmio!";
+            let primeiraLetra = frase.charAt(0);
+            
+            /* Retorna a primeira palavra */
+            let letra = "";
+            let primeiraPalavra = "";
+            i = 0;
+            while(letra != " "){
+                letra = frase.charAt(i);
+                primeiraPalavra += letra;
+                i++
+            }
+
+
+            console.log(primeiraLetra);
+
+            console.log(primeiraPalavra);
+
+            /* Retorna um tamanho específico de letras */
+            let específico = frase.substr(0,7);
+
+            console.log(específico)
+
+            /* Outra forma de retornar a primeira palavra */
+            let i2 = 0;
+            let letra2 = "";
+            let primeiraPalavra2 = "";
+            
+            while (letra2 != " ") {
+                letra2 = frase.charAt(i2);
+                primeiraPalavra2 = frase.substr(0,i2);
+                i2++;
+            }
+
+            console.log (primeiraPalavra2);
+
+            /* Retorna a string como uma array e seleciona uma posição.
+                O valor dentro do split( ) define o divisor da array. 
+                Os valores de posição vão de 0 a (n) */
+
+            console.log(frase.split(" "));
+
+            primeiraPalavra3 = frase.split(" ")[0];
+
+            console.log("Olá, " + primeiraPalavra3 + ". Bom dia!!");
+
+            /* Transformar em letra maiúculas ou minúsculas */
+
+            console.log(primeiraPalavra3.toLowerCase());
+            console.log(primeiraPalavra3.toUpperCase());
+
+            /* Transformar só a primeira letra do nome maiúsculo e pegar só o primeiro nome */
+
+            const nome = "BIRUTA BIRUTOVISKY";
+            let nomeMinusculo = nome.toLowerCase();
+            let letraMaiuculaNome = nomeMinusculo.charAt(0).toUpperCase();
+            let apenasPrimeiroNome = letraMaiuculaNome + nomeMinusculo.substr(1, nomeMinusculo.length);
+
+            console.log( "Olá, " + apenasPrimeiroNome.split(" ")[0] + ". Bom ve-lo novamente!");
+
+
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

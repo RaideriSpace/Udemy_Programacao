@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+
+            /* Retorna a data atual, com ano, mês e dia */
+
+            let agora = new Date();
+            console.log(agora.getFullYear());
+            console.log(agora.getMonth());
+            console.log(agora.getDate());
+
+            /* Retorna o mês com o nome */
+
+            const meses = [
+                "Janeiro", 
+                "Fevereiro", 
+                "Março", 
+                "Abril", 
+                "Maio", 
+                "Julho", 
+                "Junho", 
+                "Agosto", 
+                "Setembro", 
+                "Outubro", 
+                "Novembro", 
+                "Dezembro"
+            ]
+
+            console.log(meses[agora.getMonth()]);
+            
+            mesAtual = meses[agora.getMonth()];
+            anoAtual = agora.getFullYear();
+            diaAtual = agora.getDate();
+            
+            console.log("Hoje é " + diaAtual + " de " + mesAtual + " de " + anoAtual);
+
+            /* Dia da semana específico */
+
+            const semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]; 
+
+            /* Lembre-se que o mês e o dia da semana começam em 0 (Domingo) e 0 (Janeiro) */
+            let aniversario = new Date(1997,3,29);
+            console.log("Este dia cai em uma " + semana[aniversario.getDay()]);
+
+            /* Mostrar horas e minutos */
+
+            /* Faz com que retorne sempre 2 dígitos, como 02, 00, 09... */
+            function retornarDoisDigitos(tempo){
+                if (tempo<10){
+                    return "0" + tempo;
+                } else {
+                    return tempo;
+                }
+            }
+
+            console.log(retornarDoisDigitos(agora.getHours()) + ":" + retornarDoisDigitos(agora.getMinutes()) + ":" + retornarDoisDigitos(agora.getSeconds()));
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

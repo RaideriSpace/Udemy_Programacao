@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+
+            /* Número como numeral */
+            let x = 4;
+            let y = 3;
+            let w = 7;
+            let z = 2;
+
+            console.log(x + z);
+
+            /* Retorna o menor valor */
+            console.log(Math.min(x, y, w, z));
+
+            /* Retorna o maior valor */
+            console.log(Math.max(x, y, w, z));
+
+            /* Número como string */
+            let a = "4";
+            let b = "3";
+
+            console.log(a + b);
+
+            /* Transforma uma string em numeral */
+            let num = "2050";
+            let calculo = Number(num) * 2;
+            
+            console.log(calculo);
+
+            /* Sortear números - Math.random sempre cria um número entre 0 a 0.99999. 
+            Para ir até um determinado número, multiplique por ele */
+
+            let val1 = Math.random();
+            
+            console.log(val1);
+
+            /* Sorteia um número e arredonda pra cima, gerando um número de 1 a 10 */
+            val1 = Math.ceil(Math.random()*10);
+            
+            console.log(val1);
+
+            /* Sortiar 6 números */
+
+            let sorteio;
+            var mega = [];
+
+            var i = 0;
+            while(i < 6){
+
+                sorteio = Math.ceil(Math.random()*60);
+                if (mega.indexOf(sorteio) < 0 ){ 
+                    mega.push(sorteio);
+                    i++; 
+                }
+            }
+            
+            function ordenarNumeros(a,b){
+                return a-b;
+            }
+
+            mega.sort(ordenarNumeros);
+            console.log(mega);
+
+            
+
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        
+        <script src="jquery-3.7.1.js"></script>
+        <script>
+			$(function(e) {
+                // Remover               
+				$("li:last").remove();
+
+                // Alterar
+                $("li:last").replaceWith("<li>Curso Novo</li>");
+
+                // Embrulhar
+                $("ul").wrapAll("<div style='border: 1px solid #ccc'> </div>");
+			})
+		</script>        
+    </head>
+
+    <body>
+    	
+      
+		<ul>
+        		
+            <li>Curso HTML5 Essencial</li>
+            <li>Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+        
+    </body>
+
+</html>
