@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Curso de EcmaScript 6.0</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js"></script>
+
+        <script type="text/babel">
+            
+            var [primeiro, segundo, ,quarto,...resto] = ["Uva", "Maça", "Pêra", "Mamão", "Abacate", "Laranja"];
+            console.log(primeiro);
+            console.log(segundo);
+            //O valor em branco faz pular um item
+            console.log(quarto);
+            //Resto vira uma array com os valores restantes
+            console.log(resto);
+
+            let objeto1 = { tipo: "Caneta", cor:"Azul", marca:"Bic", preco:2, tampas:["Redonda", "Quadrada"]}
+
+            console.log(objeto1.tipo);
+            console.log(objeto1.preco);
+            console.log(objeto1.tampas[0]);
+
+            let {tipo,preco,borrachas} = { tipo: "Lápis", cor:"Preto", marca:"Faber", preco:5,
+                borrachas:["Redonda", "Quadrada"]
+            }
+
+            console.log(tipo);
+            console.log(preco);
+            console.log(borrachas[1])
+
+            function* gen() {
+                yield "Uva";
+                yield "Maça";
+                yield 3;
+            }
+
+            let g = gen();
+            console.log(g.next())
+            console.log(g.next())
+            console.log(g.next())
+            console.log(g.next())
+
+            function* idCriador() {
+                let i=0;
+                while(true) {
+                    yield i++;
+                }
+            }
+
+            let g2 = idCriador();
+
+            console.log(g2.next().value);
+            console.log(g2.next().value);
+            console.log(g2.next().value);
+            console.log(g2.next().value);
+            console.log(g2.next().value);
+            console.log(g2.next().value);
+
+
+            function* baterNoLiquidificador(ing){
+                for ( let i = 0; i<ing.length; i++) {
+                    yield ing[i];
+                }
+            }
+
+            var ingredientes = baterNoLiquidificador(["Leite", "Banana", "Nescau", "Aveia"]);
+
+            var fazerVitamina = setInterval( function () {
+                var vitamina = ingredientes.next();
+                if (vitamina.done){
+                    clearInterval(fazerVitamina);
+                    console.log("Acabou, sua vitamina está pronta.");
+                } else {
+                    console.log(vitamina.value);
+                }
+            }, 1000);
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

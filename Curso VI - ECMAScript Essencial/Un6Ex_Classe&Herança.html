@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Curso de EcmaScript 6.0</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.min.js"></script>
+        <script type="text/babel">
+        
+            class Produto {
+                constructor (nome, preco){
+                    this.nome = nome;
+                    this.preco = preco;
+                }
+                escreverDados(){
+                    console.log(`Minha ${this.nome} custa R$${this.preco},00 reais`)
+                }
+            }
+
+            var caneta = new Produto ("Caneta Bic", 3);
+            caneta.escreverDados();
+
+            class Poligno {
+                constructor(lados, altura, largura, nome){
+                    this.lados = lados;
+                    this.altura = altura;
+                    this.largura = largura;
+                    this.nome = nome;
+                }
+
+                escreverCaracteristicas(){
+                    console.log(`Eu sou um ${this.nome}, tenho ${this.lados} lados, ${this.altura} de altura e ${this.largura} de largura`);
+                }
+            }      
+            
+            class Quadrado extends Poligno {
+                constructor(altura, largura){
+                    super(4, altura, largura, 'Quadrado');
+                }
+            }
+
+            var pentagono = new Poligno( 5 , '5 cm' , '5 cm' , 'Pentagono' );
+            pentagono.escreverCaracteristicas();
+
+            var hexagono = new Poligno( 6, '10 cm' , 8 , 'Hexagono' );
+            pentagono.escreverCaracteristicas();
+
+            let quadrado = new Quadrado( '10 cm' , 10 );
+            quadrado.escreverCaracteristicas();
+
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -119,7 +119,59 @@
 
             minhaSalada(["Uva", "Laranja", "Mamão"])
 
-            
+            // Citando o this dentro de outro this.
+
+            var jogador = {
+                nomeJ:"Messi",
+                habilidades: ["Chutar","Driblar", "Correr", "Fazer gols"],
+                escreverHabilidades: function(){
+                    console.log(this.nomeJ);
+
+                    let _this = this;
+                    this.habilidades.forEach(function(skill){
+                        console.log(_this.nomeJ + " é craque em " + skill);
+                    })
+                }
+            }
+
+            // Usando o Bind para referenciar o this
+
+            jogador.escreverHabilidades();
+
+            var jogador2 = {
+                nomeJ2:"Ronaldinho",
+                habilidades2: ["Chutar","Driblar", "Correr", "Fazer gols"],
+                escreverHabilidades2: function(){
+                    console.log(this.nomeJ2);
+
+                    this.habilidades2.forEach(
+                        function(skill2){
+                            console.log(
+                              this.nomeJ2 + " é craque em " + skill2
+                            );
+                        }.bind(this)
+                    );
+                }
+            }
+
+            jogador2.escreverHabilidades2();
+
+            // Usando arrow funcion e concatenação com ``
+
+            var jogador3 = {
+                nomeJ3:"O Fenômeno",
+                habilidades3: ["Chutar","Driblar", "Correr", "Fazer gols"],
+                escreverHabilidades3 () {
+
+                    this.habilidades3.forEach(
+                        skill3 => console.log(
+                                `${this.nomeJ3} é craque em ${skill3}`
+                        )
+                    );
+                }
+            }
+
+            jogador3.escreverHabilidades3();
 
         </script>
 
