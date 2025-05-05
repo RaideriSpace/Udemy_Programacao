@@ -1,0 +1,108 @@
+- Importante utilizar seções na estrutura do site e ser bastante claro no conteúdo de cada uma.
+    Ex:
+        Preços
+            - Pacote A
+            - Pacote B
+            - Pacote C
+        Cursos
+            - Curso X
+            - Curso Y
+            - Curso Z
+        Sobre nós
+            - Nosso valores
+            - Depoimentos
+            - Avaliação
+            - Contato
+        Entrar
+            - Formulário de Login
+            - Esqueci minha senha
+
+- Sobre links:
+    Links internos ajudam os buscadores a entender a estrutura do site.
+
+    - Links em textos são sempre melhor do que em imagens.
+
+    - É bom utilizar o "title" no link também.
+
+    - Links em parágrafos tem uma performace melhor do que links em menus.
+
+    - Links com boas palavras chaves são excelentes.
+
+    - Links em páginas indexadas.
+
+    - Links em site relevante.
+
+    - Pontos extras se estiver em um site .edu ou .gov
+
+    - Bom estar em uma página com alto PageRank.
+
+    - Em uma página estática e não dinâmica.
+
+    - Dentro de um parágrafo.
+
+    - Páginas com atributo "rel='noFollow'" não ajudam o PageRank (Pode se verificar com extensões) no Chrome.
+
+    Tipos de links:
+        - Links de Navegação;
+
+        - Links de Conteúdo;
+            Evitar o texto "Clique Aqui", tente colocar o link no texto que menciona o link para dar clareza de para onde o link leva.
+
+- Localização:
+    Importante informar no <head> a localização do estabelecimento utlizando:
+        <meta name="geo.region" content="FR-75"/> Para determinar o país
+        <meta name="geo.placename" content="Paris"/> Para determinar a cidade
+        <meta name="geo.position" content="48.844426;2.348085"/> Para determinar Latitude;Longitude
+        <meta name="ICBM" content="48.844426, 2.348085"/> Também para determinar Latitude, Longitude
+    Para se conseguir mais facilmente as tags, pode se utilizar o site:
+        www.geo-tag.de/generator/en.html
+
+- Para pastas que *NÃO* desejamos indexar, cria-se um "ROBOTS.txt".
+    Cria-se com: 
+        User-agent
+
+            - Googlebot (pode ser New, Images, Vídeo ou Mobile) ou Bingbot
+
+            - User-agent: * fala com todos os agentes
+
+            - Evitar pastas:
+                Disallow: /admin/
+                Disallow: /cache/
+                Disallow: /css/
+                Disallow: /includes/
+                Disallow: /modelos/
+                
+
+            - Para utilizar em páginas específicas, pode se colocar no metatag
+                <meta name="ROBOTS" content="noindex,nofollow"> para os links não serem seguidos.
+            
+            - Para que nenhum arquivo pdf seja indexado no google, utiliza-se:
+                Disallow: / .pdf$
+
+    Para criar, coloca-se um arquivo TXT na raiz do site com o nome "robots.txt" contendo:
+        user-agent: *
+        Disallow: /pasta que será evitada/
+
+    - Se ficar apenas "Disallow: /", nenhuma pasta será indexada. Muito cuidado com isso.
+
+SiteMap:
+
+    - Pode ser declaraa no robots.txt escrevendo: 
+        Sitemap: http://www.seusite.com.br/sitemap.xml
+
+    - Pode ser feito o SiteMap no site:
+        www.xml-sitemaps.com
+
+    - Pode se criar um SiteMap para o usuário dentro do site.
+    
+    - Para enviar o SiteMap, entra-se no webmaster do Google e com o site verificado, ir para Console → Crawl → Sitemaps → Add/test sitemap
+
+    Importante para que o google entenda completamente toda a estrutura do site e os usuários consigam encontrar as páginas.
+
+Links externos:
+
+    - Importante ter links externos que levem ao seu site, para que ele seja mais relevante para o google.
+    - Responder fóruns de discussão com links do site.
+    - Redes sociais e sites com "No Follow" não ajudam.
+    - Pode se verificar os links digitando link:(linkdosite) para ver quantos links são feitos ao site.
+    - Também pode ser verificado com o Majestic.com

@@ -1,0 +1,20 @@
+- URL
+    Exemplo:
+        Evitar: http://www.cafefontenebleu.com/receita/prato_camarao.html
+        Utilizar: http://www.cafefontenebleu.com/receita/como-fazer-camaro-com-catupiry.html
+
+    - Descrever de forma clara e objetiva o nome da página;
+    - Preferir usar "-" ao invés de "_" para separar palavras;
+    - Jamais usar " " (espaços) entre palavras.
+    - Usar textos com letra minúsculas.
+
+
+- Title
+    - Dar destaque ao conteúdo da página
+
+- Meta Tag - Description
+    - Utilizar <meta name="description" content="Tags e informações do que tem na página e se refira ao conteúdo">
+
+- Images
+    - Dar um alt="" para as que as imagens tenham contexto claro
+    - Nomear as imagens de forma clara para que tenha chances de aparecer nas pesquisas

@@ -1,0 +1,35 @@
+{
+  "name": "curso-webpack",
+  "version": "1.0.0",
+  "description": "Curso de webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fellyph/webpack-course.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "fellyph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fellyph/webpack-course/issues"
+  },
+  "homepage": "https://github.com/fellyph/webpack-course#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  }
+}

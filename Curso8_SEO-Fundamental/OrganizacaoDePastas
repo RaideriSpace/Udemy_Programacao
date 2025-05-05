@@ -1,0 +1,39 @@
+Pasta raiz/
+    index.html
+
+    /_css
+        layout.css
+        mobile.css
+        tipografia.css
+
+    /_js
+
+    /_img
+        /_notes
+
+        /cardapio
+        
+        /diversas
+        
+        /layout
+
+    /_template/
+        modelo.html
+
+    /eventos/
+        index.html
+    
+    /dvd/
+        index.html
+
+    /menu/
+        index.html
+
+    /info/
+        index.html
+    
+    /local/
+        index.html
+
+    /depoimentos/
+        index.html
